@@ -682,14 +682,26 @@ function enviarSolicitudWhatsapp(event) {
   return false;
 }
 
-function enviarSolicitudEmail() {
+function enviarSolicitudEmail(event) {
+  if (event) event.preventDefault();
+
   const { nombre, negocio, email, tipo, mensaje } = recogerDatosContacto();
+
   const subject = `Solicitud web - ${nombre || 'Nuevo contacto'}`;
-  const body = `Hola, te escribo desde la web de ATELIER.%0A%0A` +
-               `Nombre: ${nombre || 'No indicado'}%0A` +
-               `Negocio: ${negocio || 'No indicado'}%0A` +
-               `Email: ${email || 'No indicado'}%0A` +
-               `Qué necesito: ${tipo || 'No indicado'}%0A` +
-               `Mensaje: ${mensaje || 'Sin mensaje'}%0A`;
-  window.location.href = `mailto:gpinegrad@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+  const body =
+`Hola, te escribo desde la web de ATELIER.
+
+Nombre: ${nombre || 'No indicado'}
+Negocio: ${negocio || 'No indicado'}
+Email: ${email || 'No indicado'}
+Qué necesito: ${tipo || 'No indicado'}
+Mensaje: ${mensaje || 'Sin mensaje'}`;
+
+  const gmailUrl =
+    `https://mail.google.com/mail/?view=cm&fs=1&to=gpinegrad@gmail.com` +
+    `&su=${encodeURIComponent(subject)}` +
+    `&body=${encodeURIComponent(body)}`;
+
+  window.open(gmailUrl, '_blank');
 }
+
