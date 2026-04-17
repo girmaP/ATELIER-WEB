@@ -685,7 +685,7 @@ section {
 }
 .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
 .field { display: grid; gap: 8px; }
-.field label { color: rgba(247,250,252,.9); font-weight: 600; }
+.field label { color: rgba(0, 102, 255, 0.684); font-weight: 600; }
 .field input,
 .field textarea,
 .field select {
