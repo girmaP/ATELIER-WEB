@@ -685,14 +685,14 @@ section {
 }
 .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
 .field { display: grid; gap: 8px; }
-.field label { color: rgba(0, 102, 255, 0.684); font-weight: 600; }
+.field label { color: rgba(38, 255, 0, 0.684); font-weight: 600; }
 .field input,
 .field textarea,
 .field select {
   width: 100%;
   border: 1px solid rgba(148,163,184,.16);
   background: rgba(5,11,19,.6);
-  color: #fff;
+  color: #01aeff6a;
   border-radius: 18px;
   padding: 16px 18px;
   outline: none;
