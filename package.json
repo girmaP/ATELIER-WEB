@@ -1,0 +1,1 @@
+{"name":"fontaneria-alboran","version":"2.0.0","private":true,"scripts":{"test":"node --test tests/*.test.js","check":"node --check admin.js && node --check public.js && node --check app.js && node --check api/config.js && node --check api/contact.js"},"engines":{"node":"24.x"}}
